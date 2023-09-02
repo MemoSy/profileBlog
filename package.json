@@ -9,7 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.23.2",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "autoprefixer": "10.4.15",
+    "mongoose": "^7.4.5",
     "next": "13.4.19",
     "postcss": "8.4.28",
     "react": "18.2.0",

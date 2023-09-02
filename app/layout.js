@@ -1,5 +1,15 @@
+// import Font Awesome CSS
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { ClerkProvider } from '@clerk/nextjs'
+import Nav from '@/Components/Nav'
+import { ThemeProvider } from "@/contexts/ThemeContext";
+import { ViewsCountProvider } from "@/contexts/ViewsCount";
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,8 +20,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <ViewsCountProvider>
+            <ThemeProvider>
+              <Nav />
+              {children}
+            </ThemeProvider>
+          </ViewsCountProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }
