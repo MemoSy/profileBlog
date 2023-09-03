@@ -9,6 +9,7 @@ import Views from "./Views";
 const OwnPosts = () => {
   const [data, setdata] = useState([]);
   const { user } = useClerk();
+  const name = user?.fullName == null ? user?.emailAddresses[0].emailAddress.split("@")[0] : user?.fullName
 
   useEffect(() => {
     fetch(`/api/post`)
@@ -23,7 +24,7 @@ const OwnPosts = () => {
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4">
-          {data?.map((post) => post.auth == user?.fullName ?(
+          {data?.map((post) => post.auth == name ?(
             <div className="p-4 md:w-1/3">
               <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                 <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={post.image} alt="blog" />
