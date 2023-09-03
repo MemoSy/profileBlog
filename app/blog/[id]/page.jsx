@@ -20,7 +20,7 @@ const page = (props) => {
   }, []);
 
   useEffect(() => {
-    fetch(`https://profile-blog-ochre.vercel.app/api/post/${props.params.id}`)
+    fetch(`/api/post/${props.params.id}`)
     .then((res) => res.json())
     .then((data) => {
       setData(data[0])
