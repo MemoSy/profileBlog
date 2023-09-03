@@ -10,10 +10,10 @@ const ModeSwitcher = () => {
   
   return (
     <>
-      <label className="switch" onClick={toggle}>
+      {/* <label className="switch" onClick={toggle}>
         <input type="checkbox" />
         <span className="slider"></span>
-      </label>
+      </label> */}
     </>
   )
 }

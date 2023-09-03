@@ -16,10 +16,15 @@
   }
 }
 
-.theme{
+body{
+  color: rgb(255, 255, 255);
+  background: #1a1a1a;
+}
+
+/* .theme{
   height: 100%;
   transition: .5s;
-}
+} */
 
 .light{
   color: rgb(38, 36, 36);
