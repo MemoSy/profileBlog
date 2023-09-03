@@ -38,7 +38,7 @@ const Nav = () => {
         <div className='w-full flex justify-around gap-14 items-center mb-6 bg-slate-400 rounded-xl py-3'>
           <Link href="https://mahmud.tech/" className="flex title-font font-medium items-center text-gray-900 md:mb-0">
             <img className="w-16 h-16 lg:h-16 lg:w-16 text-white p-2 rounded-full" src="https://mahmud.tech/static/media/github.b1df3043f4e05eca68b5.png" alt="" />
-            <span className="ml-3 text-xl hidden lg:flex">Mahmud.Tech</span>
+            <span className="ml-3 text-xl hidden lg:flex">ProfilePro</span>
           </Link>
           {/* mode swithcer */}
           <ModeSwitcher />
