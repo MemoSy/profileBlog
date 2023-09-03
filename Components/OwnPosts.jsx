@@ -11,7 +11,7 @@ const OwnPosts = () => {
   const { user } = useClerk();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/api/post`)
+    fetch(`https://profile-blog-ochre.vercel.app/api/post`)
       .then((res) => res.json())
       .then((data) => {
         setdata(data)

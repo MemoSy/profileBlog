@@ -10,7 +10,7 @@ const Views = ({product}) => {
   const [finalValue, setfinalValue] = useState(views);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/api/post`)
+    fetch(`https://profile-blog-ochre.vercel.app/api/post`)
       .then((res) => res.json())
       .then((data) => {
         const weWontItem =  data.filter((item) => item.title == product.title);

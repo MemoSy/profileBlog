@@ -5,7 +5,7 @@ import Views from './Views'
 
 
 async function getData() {
-  const res = await fetch('http://localhost:3000/api/post',{
+  const res = await fetch('https://profile-blog-ochre.vercel.app/api/post',{
     cache: 'no-store'
   })
   // The return value is *not* serialized
